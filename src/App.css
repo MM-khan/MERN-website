@@ -1,0 +1,78 @@
+:root{
+    --font-style: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+--color:rgb(4, 149, 245);
+
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.navbar{
+    background-color: rgb(11, 123, 197);
+    width: 95vw;
+}
+ul Link{
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+}
+#main-box{
+    width: 100%;
+    background: rgb(4, 149, 245);
+    display:flex;
+    padding: 10px;
+    border-radius:5px;
+    flex-direction:column;
+    margin-top: 35px;
+
+}
+#input-box{
+    height: 400px;
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    padding: 15px;
+    border-radius:5px;
+    font-family: var(--font-style);
+    font-weight:bolder;color:var(--color);
+}
+#white-box{
+    height: 250px;
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    padding: 15px;
+    border-radius:5px;
+    font-family: var(--font-style);
+    font-weight:bolder;color:var(--color);
+
+}
+#FORMH{
+    text-align: center;
+    color:white;
+    font-family: var(--font-style);
+    font-weight:bolder;
+    font-size:30px;
+    text-transform:capitalize;
+    margin: 15px;
+}
+.inputs{
+    border:0px;
+    padding: 5px;;
+    margin-top: 25px;
+}
+
+#Fbtn{
+    width: 100%;
+    background-color:var(--color);
+    padding:7px;
+    border:none;
+    border-radius:15px;
+    color:white;
+    font-weight:bolder;
+    font-family:var(--font-style);
+    margin-top: 35px;
+}
+#Fbtn:hover{
+    background-color:rgb(11, 123, 197) ;
+}

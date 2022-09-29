@@ -16,36 +16,61 @@ export default function Navbar() {
         let jwtoken = localStorage.getItem('token')
         setJtoken(jwtoken)
         }
-    }, [localStorage.getItem('token')])
+    }, [localStorage.getItem('token')]);
 
 
 if(jtoken){
   return (
-    <div className='bg-cyan-600 py-4 text-white '>
-        <header className='max-w-6xl mx-auto flex justify-between'>
+    <>
+      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             <h2>MERN Stack</h2>
-        <ul className='flex space-x-4'>
-            <li><Link to = "/">Home</Link></li>
-            <li><Link to = "/create">Create Ad</Link></li>
-            <li onClick={logout}>Log out</li>
-            <li><Link to = "/admin">Dashboard</Link></li>
-        </ul>
-        </header>
-    </div>
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item ">
+                <Link to = "/" className='text-white mr-3 '>Home</Link>
+              </li>
+              <li className="nav-item ">
+                <Link to = "/create" className='text-white mr-3 '>Create Ad</Link>
+              </li>
+              <li classNameName='nav-item ' onClick={logout}>Log out</li>
+              <li className="nav-item ">
+                <Link to = "/admin" className='text-white mr-3 '>Dashboard</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
   )
 }else{
   return (
-    <div className='bg-cyan-600 py-4 text-white '>
-        <header className='max-w-6xl mx-auto flex justify-between'>
-            <h2>Hello MERN stack</h2>
-        <ul className='flex space-x-4'>
-            <li><Link to = "/">Home</Link></li>
-            <li><Link to = "/register">Registration</Link></li>
-            <li><Link to = "/login">Log In</Link></li>
-            
-        </ul>
-        </header>
-    </div>
+    <>
+      <nav className="navbar navbar-expand-sm navbar-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            <h2>MERN Stack</h2>
+          </a>
+            <ul className="navbar-nav ml-auto ">
+              <li className="nav-item ">
+                <Link to = "/" className='text-white mr-3 '>Home</Link>
+              </li>
+              <li className="nav-item ">
+                <Link to = "/register" className='text-white mr-3 '>Registration</Link>
+              </li>
+              <li className="nav-item ">
+                <Link to = "/login" className='text-white mr-3 '>Log In</Link>
+              </li>
+            </ul>
+          
+        </div>
+      </nav>
+    </>
   )
 }
 }

@@ -22,7 +22,8 @@ export default function Create() {
           post(`${serverUrl}olx/ads`, formData, {
             headers: {
               'Accept': 'application/json',
-              'Content-Type': 'multipart/form-data'
+              'Content-Type': 'multipart/form-data',
+              'X-TOKEN': "String"
             }
           })
             .then(function (response) {
